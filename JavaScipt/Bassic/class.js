@@ -1,16 +1,21 @@
 class People{
 
-    constructor(id, name, birthday){
+    constructor(id, firstName, lastName , dob){
         this.id = id;
-        this.name = name;
-        this.birthday = birthday;   
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob); // date of birth
     }
 
-    sayHello(){
-        return "Hello";
-    }               
+    getYearsOfBirth(){
+        return this.dob.getFullYear();
+    }
+    
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
 }
 
-const people = new People(1, "John", "1990-01-01"); 
+const people = new People(1, "Lam", "Dai", "07-07-2003"); 
 
-console.log(people.sayHello()); 
+console.log(people.getFullName());   
