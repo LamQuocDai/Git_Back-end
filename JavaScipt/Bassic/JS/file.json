@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Dai",
+        "age": 20,
+        "faveriteFood": [{
+            "name": "Pizza",
+            "type": "Fast Food"
+        },
+        {
+            "name": "Burger",
+            "type": "Fast Food"
+        }]
+    },
+    {
+        "name": "A",
+        "age": 20,
+        "faveriteFood": [{
+            "name": "Pho",
+            "type": "Vietnamese Food"
+        },
+        {
+            "name": "Bun",
+            "type": "Vietnamese Food"
+        }]
+    }
+]
