@@ -1,5 +1,9 @@
 const path = require('path');
 
+// Base file name
+const pathObj = path.parse(__filename);
+console.log(pathObj);
+
 //Base file name
 console.log(__filename);
 console.log(path.basename(__filename)); 

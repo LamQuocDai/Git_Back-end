@@ -14,3 +14,13 @@ myEmitter.emit(('event')); // Event fired!
 myEmitter.emit(('event'))
 myEmitter.emit(('event'))
 myEmitter.emit(('event'))
+
+const emitter = new EventEmitter();
+
+// Listen for an event
+emitter.on('message', (arg) => {
+    console.log('Listener called', arg);
+});
+
+// Raise an event
+emitter.emit('message', {id: 1 , url : 'http://'});

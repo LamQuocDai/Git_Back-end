@@ -1,6 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 
+// read file in directory
+/*
+const files = fs.readdirSync('./');
+console.log(files);
+*/
+
+fs.readdir('./', (err, files) => {
+    if(err) throw err;
+    console.log(files);
+})
+
 // Create a folder
 /*
 fs.mkdir(path.join(__dirname, '/test'), {} , err =>{
