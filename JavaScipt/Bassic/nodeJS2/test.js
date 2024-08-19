@@ -11,3 +11,7 @@ module.exports.Person =  class Person {
 module.exports.sayHello = function sayHello() {
     console.log('Hello');
 }
+
+exports.sayGoodbye = () => {
+    console.log('Goodbye');
+}

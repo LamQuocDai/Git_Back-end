@@ -3,7 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const { hostname } = require('os');
 
-const server = http.createServer((req, res) => {
+const PORT = process.env.PORT || 5000;
+
+http.createServer((req, res) => {
     /*
     if(req.url === '/'){
         fs.readFile(path.join(__dirname, 'public', 'index.html'), 
@@ -87,8 +89,4 @@ const server = http.createServer((req, res) => {
             res.end(content, 'utf8');
         }
     });
-});
-
-const PORT = process.env.PORT || 5000;
-
-server.listen(PORT, () => console.log(`Server running ${hostname} on port ${PORT}`));
+}).listen(PORT, () => console.log(`Server running ${hostname} on port ${PORT}`));
