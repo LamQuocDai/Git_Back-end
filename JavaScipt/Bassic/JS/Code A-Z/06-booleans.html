@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scissors-paper-rock</title>
+</head>
+
+<body>
+  <p>Scissors Paper Rock</p>
+  <button onclick="let playerSelection = 'scissors'; alert(playRound(playerSelection,computerPlay()));">Scissors</button>
+  <button onclick="playerSelection = 'paper'; alert(playRound(playerSelection,computerPlay()));">Paper</button>
+  <button onclick="playerSelection = 'rock'; alert(playRound(playerSelection,computerPlay()));">Rock</button>
+  <script>
+    function computerPlay() {
+      let choices = ['scissors', 'paper', 'rock'];
+      return choices[Math.floor(Math.random() * choices.length)];
+    }
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection === computerSelection) {
+        return 'It\'s a tie!';
+      } else if (
+        (playerSelection === 'scissors' && computerSelection === 'paper') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'rock' && computerSelection === 'scissors')
+      ) {
+        return 'You win!';
+      } else {
+        return 'You lose!';
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.button{
+  background-color: hsl(207, 67%, 51%);
+  color: white;
+  padding : 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.button_hover:hover{
+  background-color: hsl(24, 74%, 49%);
+  color: black;
+}
