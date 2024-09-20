@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON stringify</title>
+</head>
+<body>
+  <script>
+    const product = {
+      name: 'Laptop',
+      price: 1200,
+      information: {
+        brand: 'Dell',
+        model: 'Inspiron 15',
+      },
+      feathers: () => {
+        return 'This is a laptop';
+      }
+    }
+
+    console.log(product);
+
+    const productString = JSON.stringify(product);
+
+    console.log(productString);
+
+    const productObject = JSON.parse(productString);
+
+    console.log(productObject);
+  </script>
+</body>
+</html>

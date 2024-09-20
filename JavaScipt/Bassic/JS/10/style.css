@@ -1,0 +1,55 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.text_todo{
+  padding: 10px;
+  margin: 10px;
+}
+
+.date_todo{
+  padding: 10px;
+  margin: 10px;
+}
+
+.btn_todo{
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+}
+
+.btn_todo:hover {
+  background-color: #45a049;
+}
+
+.list{
+  display: grid;
+  grid-template-columns: 200px 200px 100px;
+  row-gap: 10px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+
+.del_todo{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.del_todo:hover {
+  background-color: #da190b;
+}
+
+.text_error{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  color: red;
+}

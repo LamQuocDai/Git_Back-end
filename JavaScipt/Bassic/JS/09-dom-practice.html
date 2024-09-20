@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button id="heads" onclick="clickBtn(this);">heads</button>
+  <button id="tails" onclick="clickBtn(this);">tails</button>
+  <p id="text"></p>
+
+  <input type="text" id="name" placeholder="Name" onkeydown="
+    if(event.key === 'Enter'){
+      document.getElementById('textName').textContent = `Your name is ${this.value}`;
+    }
+  ">
+  <p id="textName"></p>
+  <script>
+    function clickBtn(btn){
+      document.getElementById('text').innerHTML = `You choose ${btn.textContent}`;
+    }
+  </script>
+</body>
+</html>

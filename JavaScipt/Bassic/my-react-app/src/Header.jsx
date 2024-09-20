@@ -1,5 +1,4 @@
 
-
 function Header(){
 
   return (
@@ -7,7 +6,7 @@ function Header(){
       <h1>Weblcome my website</h1>
       <ul>
         <li>
-          <a href="/">Home</a>
+            <a href="/">Home</a>
         </li>
         <li>
           <a href="/about">About</a>

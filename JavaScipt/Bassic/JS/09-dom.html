@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Project</title>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button id="subscribe">Subscribe</button>
+
+  <p>Scissors Paper Rock</p>
+  <a href="./09-object.html">Play in here</a>
+
+  <p>
+    Amanazon Shipping Calculator
+    <br>
+    Orders under $40 = + $10 Shipping
+    <br>
+    Orders over $40 = Free Shipping
+  </p>
+  <input type="number" id="input-cost" placeholder="Cost of order">
+  <button id="calculate">Calculate</button><br><br>
+  <a href="">CSS version of these projects</a>
+  <script>
+    const subscribeButton = document.getElementById('subscribe');
+    const calculateButton = document.getElementById('calculate');
+    subscribeButton.addEventListener('click', () => {
+      subscribeButton.textContent === 'Subscribed' ? subscribeButton.textContent = 'Subscribe' : subscribeButton.textContent = 'Subscribed';
+    });
+    calculateButton.addEventListener('click', () => {
+      const cost = parseInt(document.getElementById('input-cost').value);
+      if (cost < 40) {
+        alert(`Total cost is $${cost + 10}`);
+      } else {
+        alert(`Total cost is $${cost}`);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scissors-paper-rock</title>
+</head>
+<body>
+  <p>Scissors Paper Rock</p>
+  <button onclick="let playerSelection = 'scissors'; alert(playRound(playerSelection,computerPlay())+ '     ' +showResult());">Scissors</button>
+  <button onclick="playerSelection = 'paper'; alert(playRound(playerSelection,computerPlay())+ '     ' +showResult());">Paper</button>
+  <button onclick="playerSelection = 'rock'; alert(playRound(playerSelection,computerPlay())+ '     ' +showResult());">Rock</button>
+  <button onclick="reset(); localStorage.removeItem('result');">reset</button>
+  <script>
+    const result = JSON.parse(localStorage.getItem('result')) || { win: 0, lose: 0, tie: 0 };
+
+    function computerPlay() {
+      let choices = ['scissors', 'paper', 'rock'];
+
+      return choices[Math.floor(Math.random() * choices.length)];
+    }
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection === computerSelection) {
+        result.tie++;
+        return 'It\'s a tie!';
+      } else if (
+        (playerSelection === 'scissors' && computerSelection === 'paper') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'rock' && computerSelection === 'scissors')
+      ) {
+        result.win++;
+        return 'You win!';
+      } else {
+        result.lose++;
+        return 'You lose!';
+      }
+    }
+
+    function showResult() {
+      localStorage.setItem('result', JSON.stringify(result));
+      return `Win: ${result.win}, Lose: ${result.lose}, Tie: ${result.tie}`;
+    }
+
+    function reset() {
+      result.win = 0;
+      result.lose = 0;
+      result.tie = 0;
+    }
+  </script>
+</body>
+</html>
